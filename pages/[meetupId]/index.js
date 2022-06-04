@@ -36,8 +36,9 @@ export const getStaticPaths = async () => {
 
   client.close();
 
+  //'blocking' = will avoid a 404 if it can't find. It will generate page on command
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
