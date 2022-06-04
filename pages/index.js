@@ -80,7 +80,7 @@ export const getStaticProps = async () => {
       })),
     },
     //update in seconds
-    revalidate: 3600,
+    revalidate: 1,
   };
 };
 
